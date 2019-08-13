@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+   <title data-th-text="|Alter ${contraction.result}|"></title>
+  </head>
+  <body>
+    <h1 data-th-text="|Alter, if you wish - 
+    	and it seems that you do because you're on this page - ${contraction.result}|"></h1>
+    	<br />
+	<form data-th-action="|/contractions/alter/${contraction.id}|" method="POST"
+		data-th-object="${contraction}">
+		<div class="form-group">
+			<label>Word One</label> <input type="text"
+				class="form-control" id="wordOne" placeholder="the first word"
+				data-th-errorclass="is-invalid" data-th-field="*{wordOne}" />
+			<div class="invalid-feedback" data-th-errors="*{wordOne}"></div>
+		</div>
+		<div class="form-group">
+			<label>The Inimitable Apostrophe</label> <input type="text"
+				class="form-control" id="apostrophe" placeholder="please, only an apostrophe here"
+				data-th-errorclass="is-invalid" data-th-field="*{apostrophe}" />
+			<div class="invalid-feedback" data-th-errors="*{apostrophe}"></div>
+		</div>
+		<div class="form-group">
+			<label>Word Two</label> <input type="text"
+				class="form-control" id="wordTwo" placeholder="the second word"
+				data-th-errorclass="is-invalid" data-th-field="*{wordTwo}" />
+			<div class="invalid-feedback" data-th-errors="*{wordTwo}"></div>
+		</div>
+		<div class="form-group">
+			<label>The Contraction</label> <input type="text"
+				class="form-control" id="result" placeholder="the crux of it all"
+				data-th-errorclass="is-invalid" data-th-field="*{result}" />
+			<div class="invalid-feedback" data-th-errors="*{result}"></div>
+		</div>
+		<div class="form-group">
+			<label>Usability</label>
+			<select class="form-control"
+				data-th-errorclass="is-invalid" data-th-field="*{usability}">
+  				<option value="0">0</option>
+  				<option value="1">1</option>
+  				<option value="2">2</option>
+  				<option value="3">3</option>
+  				<option value="4">4</option>
+  				<option value="5">5</option>
+  				<option value="6">6</option>
+  				<option value="7">7</option>
+  				<option value="8">8</option>
+  				<option value="9">9</option>
+			</select>
+			<div class="invalid-feedback" data-th-errors="*{usability}"></div>
+		</div>
+		<button class="btn btn-primary" 
+		        type="submit">Alter</button>
+	</form>
+
+	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
+   
+   
+   
+   
+   
+   
+   
